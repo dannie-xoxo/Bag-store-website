@@ -6,6 +6,10 @@
     src: url("Dune_Rise.otf");
     font-family: dune;
 }
+@font-face {
+    src: url("fonts/CaviarDreams.ttf");
+    font-family: caviar;
+}
 *{
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -39,7 +43,8 @@ body {
 }
 
 .aside p {
-    font-size: 1.1em;
+    font-size: 1em;
+    font-family: "caviar";
 }
 
 .field {
@@ -61,13 +66,13 @@ body {
     padding-top: 55px;
     padding-left: 20px;
     margin: 0;
-    color: white
+    color: white;
 }
 label {
     font-size: 1em;
     text-transform: uppercase;
-    font-family: "anurati";
-     
+    font-family: "caviar";
+    font-weight: bolder;
 }
 
 input[type=text], 
@@ -86,9 +91,11 @@ button {
     background: linear-gradient( to right, rgb(0, 0, 0), rgb(66, 62, 62)) ;
     padding: 10px;
     border-radius: 15px;
+    text-transform: uppercase;
     color: white;
-    font-family: "dune";
+    font-family: "caviar";
     font-weight: bolder;
+    font-size: 1.1em;
     transition: transform .5s;
     border: none;
 }
