@@ -1,0 +1,107 @@
+@font-face {
+    src: url("anurati.otf");
+    font-family: anurati;
+}
+@font-face {
+    src: url("Dune_Rise.otf");
+    font-family: dune;
+}
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+.container {
+    display: flex;
+    height: 100vh;
+}
+.aside,  
+.field {
+    flex: 50%;
+}
+
+.aside {
+    background: linear-gradient( to right, rgb(0, 0, 0), rgb(43, 41, 41)) ;
+    padding: 20px;
+    flex: 2;
+    color: white;
+    
+}
+.aside h1 {
+    font-size: 3.5em;
+    font-family: "anurati";
+    text-shadow: 3px 3px  rgb(105, 102, 102);
+    margin-top: .7em;
+    margin-bottom: 2em;
+}
+
+.aside p {
+    font-size: 1.1em;
+}
+
+.field {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/img-8.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+
+   
+}
+.field h2 {
+    font-family: "anurati";
+    color: white;
+    font-size: 2em;
+    text-shadow: 3px 3px rgb(12, 12, 12);
+}
+
+.field-signup {
+    padding-top: 55px;
+    padding-left: 20px;
+    margin: 0;
+    color: white
+}
+label {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: "anurati";
+     
+}
+
+input[type=text], 
+input[type=password] {
+    border-radius: 15px;
+    outline: none;
+    padding: 10px;
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 20px;  
+    border: none;
+    transition: transform .5s;
+}
+
+button {
+    background: linear-gradient( to right, rgb(0, 0, 0), rgb(66, 62, 62)) ;
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+    font-family: "dune";
+    font-weight: bolder;
+    transition: transform .5s;
+    border: none;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+.b-2, .b2 {
+   display: flex;
+}
+.b-2 p {
+    font-size: .9em;
+}
+.b2{
+    margin-left: 5px;
+}

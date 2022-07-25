@@ -1,0 +1,260 @@
+/* CSS Variables */
+:root {
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, .8);
+}
+@font-face {
+    src: url("Dune_Rise.otf");
+    font-family: dune;
+}
+@font-face {
+    src: url("anurati.otf");
+    font-family: anurati;
+}
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 30px 50px;
+    background:#ccc; 
+}
+.btn {
+    background: var(--dark);
+    color: var(--light);
+    padding: .6em 1.3em;
+    border-radius: 15px;
+    text-decoration: none;
+    border: 0;
+    text-transform: uppercase;
+    font-family:"anurati"
+}
+img {
+    width: 100%;
+}
+
+.container {
+    display: grid;
+    grid-gap: 20px;
+}
+ 
+/* Header */
+.main-header {
+    background: var(--dark);
+    display: flex;
+    padding: 20px 50px;
+    font-family: "anurati";
+    color: white;
+    font-size: 3em;
+    border-radius: 15px;
+    text-shadow: 3px 3px black;
+    justify-content: space-between;
+    
+
+}
+.icon {
+    width: 35px;
+    height: 35px;
+    display: flex;   
+   
+}
+
+/* Nav layout */
+.key-nav ul {
+    display: grid;
+    grid-gap: 20px;
+    padding: 0;
+    list-style-type: none;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.key-nav a {
+    background: var(--primary);
+    display: block;
+    padding:.8em;
+    text-align: center;
+    border-radius: 20px;
+    color: var(--dark);
+    text-transform: uppercase;
+    font-size:1.1em;
+    box-shadow: var(--shadow);
+    font-family: "anurati";
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.key-nav a:hover {
+    transition: .5s ease-in;
+    background: var(--dark);
+    color: var(--light);
+}
+
+/* Top container */
+.top-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "showcase showcase side-box-a"
+    "showcase showcase side-box-b"
+}
+
+.showcase {
+    grid-area: showcase;
+    min-height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/img-4.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+.showcase h1 {
+    font-size: 4em;
+    margin-bottom: 0;
+    color: var(--light);
+    text-transform: uppercase;
+    font-family: "anurati";
+}
+
+.showcase p {
+    color: var(--light);
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+/* Side boxes */
+.side-box {
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    color: var(--light);
+    font-family: "dune";
+    font-weight: bolder;
+    font-size: 1.1em;
+   
+}
+.side-box-a {
+    grid-area: side-box-a;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("images/img-1.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 1.5em;
+}
+
+.side-box-b {
+    grid-area: side-box-b;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/img-2.jpg");
+    background-size: cover;
+    padding: 1.5em;
+
+}
+
+/* Boxes */
+
+.boxes {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
+}
+.box {
+    text-align: center;
+    color: var(--dark);
+    font-size: 1em;
+    font-family: "dune";
+    font-weight: bolder;
+
+}
+
+/* Info section */
+.info {
+    background: linear-gradient(rgba(66, 65, 65, 0.5), rgba(0, 0, 0, 0.5)),url("images/img-6.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content: center;
+    padding: 0 3em; 
+}
+
+.info h1 {
+    font-size: 3.3em;
+    margin-bottom: 0;
+    color: var(--light);
+    text-transform: uppercase;
+    font-family: "anurati";
+}
+
+.info p {
+    color: var(--light);
+    font-size: 1.1em;
+}
+
+/* Portfolio */
+
+.portfolio {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax( 200px,  1fr));
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    background: var(--dark);
+    color: var(--light);
+    padding: 1em;
+    border-radius: 15px;
+    text-align: center;
+    font-family: "anurati";
+    font-size: 1.5em;
+    text-shadow: 3px 3px black;
+    margin-top: 1.5em;
+}
+
+/* Media Queries */
+
+@media( max-width: 700px) {
+    .top-container {
+        grid-template-areas: 
+        "showcase showcase"
+        "side-box-a side-box-b";
+    }
+    .showcase h1 {
+        font-size: 2.5em;
+    }
+    .main-header {
+        display: flex;
+        flex-direction: row;
+    }
+
+ .key-nav ul {
+    grid-template-columns: 1fr;
+}
+    .info {
+        grid-template-columns: 1fr;
+    }
+}  
+
+@media( max-width: 500px) {
+    .top-container {
+        grid-template-areas: 
+        "showcase "
+        "side-box-a"
+        "side-box-b";
+    }
+}
+    
+
+   
+
+
